@@ -33,7 +33,7 @@ const USER_DATA: User[] = [
 
 // こいつを10:00 - 11:00で定時実行する
 // TODO 10:00ピッタリにやる場合は、午前1時とかに時間指定のトリガー作るトリガーをセットすればできそう。
-function daily_notification () {
+const daily_notification = () => {
   slackApp.postMessage(CHANNEL_ID, "昨日の10:00からの精進量になります。", {icon_emoji: ICON_MUSCLE});
   USER_DATA.forEach(user => postDataToSlack(user.name));
 }
@@ -78,15 +78,15 @@ const postDataToSlack = (userName: string) => {
 
 
 
-function getAcCell(userName: string) {
+const getAcCell = (userName: string) => {
   return getCol(userName) + ROW_AC;
 }
 
-function getScoreCell(userName: string) {
+const getScoreCell = (userName: string) => {
   return getCol(userName) + ROW_SCORE;
 }
 
-function getCol(userName: string) {
+const getCol = (userName: string) => {
   // TODO Error handling
   return USER_DATA.filter(user => user.name == userName)[0].gssCol;
 }
