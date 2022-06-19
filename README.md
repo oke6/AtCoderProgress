@@ -17,7 +17,7 @@ AtCoderの進捗をslackに通知してるGASのソース
 
 ### Github Actionsによるデプロイ ###
  - mainブランチにpushされた場合、Github ActionsによりGASスクリプトの自動デプロイを行います。
- - ログイン情報はRepository Secretsに設定している内容をもとに定義しています
+ - ログイン情報はRepository Secretsに設定している内容をもとに定義しています  
 ※詳細は「action.yml」を確認  
 ※claspの仕様については割愛 
   
