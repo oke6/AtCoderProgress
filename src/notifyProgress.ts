@@ -1,10 +1,6 @@
 declare const SlackApp: {
   create(token: unknown): {
-    postMessage(
-      channelId: string,
-      message: string,
-      options: unknown
-    ): void;
+    postMessage(channelId: string, message: string, options: unknown): void;
   };
 };
 
