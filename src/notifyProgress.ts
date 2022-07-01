@@ -101,6 +101,7 @@ const getAbuseComment = () => {
     '衰退あるのみです',
     'やる気あるの？',
     'あなたは一生平凡な人生です',
+    '来世頑張ろう'
   ];
   const message = `精進記録なし。\n${comments[Math.floor(Math.random() * comments.length)]}`;
   return message;
