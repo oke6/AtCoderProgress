@@ -35,8 +35,16 @@ const USER_DATA: User[] = [
   { name: 'thanai', gssCol: 'E' },
 ];
 
-// こいつを10:00 - 11:00で定時実行する
-// TODO 10:00ピッタリにやる場合は、午前1時とかに時間指定のトリガー作るトリガーをセットすればできそう。
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const setTrigger = () => {
+  const next = new Date();
+  next.setHours(10);
+  next.setMinutes(0);
+  next.setSeconds(0);
+
+  ScriptApp.newTrigger('dailyNotification').timeBased().at(next).create();
+};
+
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const dailyNotification = () => {
   slackApp.postMessage(CHANNEL_ID, '昨日の10:00からの精進量になります。', { icon_emoji: ICON_MUSCLE });
@@ -101,6 +109,8 @@ const getAbuseComment = () => {
     '衰退あるのみです',
     'やる気あるの？',
     'あなたは一生平凡な人生です',
+    'A問題でもいいからやれよ',
+    'あなたは言い訳の天才です',
   ];
   const message = `精進記録なし。\n${comments[Math.floor(Math.random() * comments.length)]}`;
   return message;
