@@ -30,7 +30,7 @@ type User = {
 };
 
 const USER_DATA: User[] = [
-  { name: 'ken0828', gssCol: 'C' },
+  { name: 'chocoball', gssCol: 'C' },
   { name: 'megahighball_t', gssCol: 'D' },
   { name: 'thanai', gssCol: 'E' },
 ];
