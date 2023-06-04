@@ -42,7 +42,7 @@ const setTrigger = () => {
   next.setMinutes(0);
   next.setSeconds(0);
 
-  ScriptApp.newTrigger('dailyNotification').timeBased().at(next).create();
+  // ScriptApp.newTrigger('dailyNotification').timeBased().at(next).create();
 };
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
